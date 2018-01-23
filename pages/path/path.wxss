@@ -1,0 +1,21 @@
+/* pages/path/path.wxss */
+
+.kind-list-item {
+  padding: 30rpx;
+  margin: 20rpx 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.kind-list-item:first-child {
+  margin-top: 0;
+}
+.kind-list-text{
+  flex: 1;
+}
+.kind-list-img {
+  width: 60rpx;
+  height: 60rpx;
+}
