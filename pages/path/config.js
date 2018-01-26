@@ -1,6 +1,6 @@
 /** 配置文件 */
 
-var host = 'http://45.77.174.154';
+var host = 'http://118.24.5.227';
 
 var config = {
   infosUrl:`${host}/infos`
