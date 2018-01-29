@@ -1,7 +1,10 @@
 <!--pages/path/path.wxml-->
-<block class=".kind-list-item-hd" wx:for-items="{{list}}" wx:key="{{item.id}}">
-  <view id="{{item.id}}" class="kind-list-item" bindtap="kindToggle">
+<block class=".kind-list-item-hd" wx:for-items="{{list}}" wx:key="{{item.name}}">
+  <view id="{{item.name}}" class="kind-list-item" bindtap="kindToggle">
+    <view class="kind-list-text">{{item.timestamp}}</view>
+    <view class="kind-list-text">{{item.msg}}</view>
     <view class="kind-list-text">{{item.name}}</view>
+    <view class="kind-list-text">{{item.location}}</view>
     <image class="kind-list-img" src="resources/feedback.png"></image>
   </view>
 </block>

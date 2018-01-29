@@ -1,6 +1,6 @@
 // pages/path/path.js
-
-const getInfosUrl = require('config').infosUrl
+import eventInfo from '../../utils/event'
+const getInfosUrl = require('../../config').infosUrl
 
 Page({
 
@@ -10,9 +10,7 @@ Page({
   data: {
     list: [
       {
-        id: 'view',
-        name: 'default',
-        open: true
+        name: 'default'
       }
     ]
   },
@@ -79,16 +77,16 @@ Page({
     wx.request({
       url: getInfosUrl, 
       data: {
-        user_id: '123'
+        name: getApp().globalData.myEvent.name
       },
       header: {
         'content-type': 'application/json' 
       },
       success: function (res) {
-        console.log(res.data)
         that.setData({
-          list: res.data.infos
+          list: res.data.data
         })
+        console.log(that.data.list)
       }
     })
   },
