@@ -29,8 +29,9 @@
 
 .icon-box-footer{
   margin-bottom: 0rpx;
-  padding: 0 105rpx;
+  padding: 0 20rpx;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -51,13 +52,13 @@
 
 .box-time{
   margin-top: 6rpx;
-  font-size: 26rpx;
-  color: #888;
+  font-size: 20rpx;
+  color: #aaa;
 }
 
 .box-location{
-  margin-left: 80rpx;
+  margin-left: 60rpx;
   margin-top: 6rpx;
-  font-size: 26rpx;
-  color: #888;
+  font-size: 20rpx;
+  color: #aaa;
 }
