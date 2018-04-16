@@ -1,10 +1,19 @@
 <!--pages/path/path.wxml-->
 <block class=".kind-list-item-hd" wx:for-items="{{list}}" wx:key="{{item.name}}">
+
   <view id="{{item.name}}" class="kind-list-item" bindtap="kindToggle">
-    <view class="kind-list-text">{{item.timestamp}}</view>
-    <view class="kind-list-text">{{item.msg}}</view>
-    <view class="kind-list-text">{{item.name}}</view>
-    <view class="kind-list-text">{{item.location}}</view>
-    <image class="kind-list-img" src="resources/feedback.png"></image>
+    <view class="icon-box">
+      <icon class="icon-box-img" type="success" size="63"></icon>
+      <view class="icon-box-ctn">
+        <view class="icon-box-title">{{item.name}}</view>
+        <view class="icon-box-desc">{{item.msg}}</view>
+      </view>
+    </view>
+
+    <view class="icon-box-footer">
+      <view class="box-time">{{item.timestamp}}</view>
+      <view class="box-location">{{item.location}}</view>
+    </view>
   </view>
+  
 </block>

@@ -2,11 +2,11 @@
 
 .kind-list-item {
   padding: 30rpx;
-  margin: 20rpx 20rpx;
+  margin: 20rpx 10rpx;
   background-color: #FFFFFF;
   border-radius: 4rpx;
   overflow: hidden;
-  display: flex;
+  display: block;
   align-items: center;
 }
 .kind-list-item:first-child {
@@ -18,4 +18,46 @@
 .kind-list-img {
   width: 60rpx;
   height: 60rpx;
+}
+
+.icon-box{
+  margin-bottom: 10rpx;
+  padding: 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-box-footer{
+  margin-bottom: 0rpx;
+  padding: 0 105rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-box-img{
+  margin-right: 46rpx;
+}
+.icon-box-ctn{
+  flex-shrink: 100;
+}
+.icon-box-title{
+  font-size: 34rpx;
+}
+.icon-box-desc{
+  margin-top: 12rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+
+.box-time{
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+
+.box-location{
+  margin-left: 80rpx;
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #888;
 }
