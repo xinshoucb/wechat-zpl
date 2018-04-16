@@ -83,10 +83,14 @@ Page({
         'content-type': 'application/json' 
       },
       success: function (res) {
+        console.log(that.data.list);
+        
+        let jsonArray = JSON.parse(res.data.data);
+
         that.setData({
-          list: res.data.data
-        })
-        console.log(that.data.list)
+          list: jsonArray
+        });
+        console.log(jsonArray);
       }
     })
   },
