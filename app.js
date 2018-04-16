@@ -1,6 +1,8 @@
 //app.js
 const uploadEventUrl = require('config').uploadEventUrl
+const util = require('utils/util.js')
 import eventInfo from 'utils/event'
+
 
 App({
   onLaunch: function () {
@@ -23,8 +25,14 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              // this.uploadEvent()
+              this.globalData.userInfo = res.userInfo;
+              this.globalData.myEvent.name = this.globalData.userInfo.nickName;
+              this.globalData.myEvent.avatar = this.globalData.userInfo.avatarUrl;
+              this.globalData.myEvent.location = this.globalData.userInfo.province + " " + this.globalData.userInfo.city;
+              this.globalData.myEvent.timestamp = util.formatTime(new Date());
+
+              this.uploadEvent();
+
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {

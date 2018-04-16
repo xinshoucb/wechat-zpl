@@ -3,7 +3,7 @@
 
   <view id="{{item.name}}" class="kind-list-item" bindtap="kindToggle">
     <view class="icon-box">
-      <icon class="icon-box-img" type="success" size="63"></icon>
+      <image class="userinfo-avatar" src="{{item.avatar}}"></image>
       <view class="icon-box-ctn">
         <view class="icon-box-title">{{item.name}}</view>
         <view class="icon-box-desc">{{item.msg}}</view>
